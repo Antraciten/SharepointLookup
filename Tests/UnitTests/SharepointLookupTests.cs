@@ -13,25 +13,28 @@ namespace BizTalkComponents.PipelineComponents.SharepointLookup.Tests.UnitTests
         public void Test()
         {
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            config.AppSettings.Settings.Add("SharePointSite", "https://ibizcloud.sharepoint.com/sites/Lvenskiold2");
-            config.Save(ConfigurationSaveMode.Modified);
-            ConfigurationManager.RefreshSection("appSettings");
-
-            string file = "../../../TestData/ShipmentBooking_v1.0.xml";
+            if (config.AppSettings.Settings["SharePointSite"] == null)
+            {
+                config.AppSettings.Settings.Add("SharePointSite", "https://TestUrl.org");
+            }
+            else
+            {
+                config.AppSettings.Settings["SharePointSite"].Value = "https://TestUrl.org";
+            }
             
-            string StoreId = "274";
+            string Key = "274";
             string DestinationPath = "https://Test.Schemas.PropertySchema#Destination";
             
-            IBaseMessage message = MessageHelper.CreateFromStream(File.OpenRead(file));
-            message.Context.Write("StoreId", "https://Test.Schemas.PropertySchema", StoreId);
+            IBaseMessage message = MessageHelper.CreateFromString("<Test/>");
+            message.Context.Write("Key", "https://Test.Schemas.PropertySchema", Key);
             message.Context.Write("DestinationPath", "https://Test.Schemas.PropertySchema", DestinationPath);
 
             var component = new SharepointLookup()
             {
-                Disable = false,
-                PropertyPath = "https://Test.Schemas.PropertySchema#StoreId",
+                Disabled = false,
+                PropertyPath = "https://Test.Schemas.PropertySchema#Key",
                 DestinationPath = "https://Test.Schemas.PropertySchema#DestinationPath",
-                ListName = "BASELINE_ORDERNOTIFICATION_TO_ENDPOINT",
+                ListName = "TestList",
                 ThrowException = true,
                 PromoteProperty = true
             };
@@ -41,7 +44,7 @@ namespace BizTalkComponents.PipelineComponents.SharepointLookup.Tests.UnitTests
 
             IBaseMessage results = sendPipeline.Execute(message);
 
-            Assert.AreEqual(StoreId, results.Context.Read("StoreId", "https://Test.Schemas.PropertySchema"));
+            Assert.AreEqual(Key, results.Context.Read("StoreId", "https://Test.Schemas.PropertySchema"));
 
             Assert.IsTrue(results.Context.IsPromoted("DestinationPath", "https://Test.Schemas.PropertySchema"));
 

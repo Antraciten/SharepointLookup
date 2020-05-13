@@ -45,7 +45,7 @@ namespace TestPipelineComponent
 
             var component = new SharepointLookup()
             {
-                Disable = false,
+                Disabled = false,
                 PropertyPath = PropertyPath,
                 DestinationPath = DestinationPath,
                 ListName = ListName,

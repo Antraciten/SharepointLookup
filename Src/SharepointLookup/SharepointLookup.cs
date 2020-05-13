@@ -16,10 +16,10 @@ namespace BizTalkComponents.PipelineComponents.SharepointLookup
     public partial class SharepointLookup : IComponent, IBaseComponent,
                                         IPersistPropertyBag, IComponentUI
     {
-        [DisplayName("Disable")]
-        [Description("Disable the component")]
+        [DisplayName("Disabled")]
+        [Description("Disables the component")]
         [RequiredRuntime]
-        public bool Disable { get; set; }
+        public bool Disabled { get; set; }
 
         [DisplayName("Property Path")]
         [Description("The property Path to use as key to query the sharepoint list, i.e. http//:examplenamespace#Myproperty")]
@@ -60,7 +60,7 @@ namespace BizTalkComponents.PipelineComponents.SharepointLookup
             }
             
             //component will not be executed if the property is set to true
-            if(Disable)
+            if(Disabled)
             {
                 return pInMsg;
             }
