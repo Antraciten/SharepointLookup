@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BizTalkComponents.PipelineComponents.SharepointLookup</id>
+    <version>1.0</version>
+    <authors>Timothy Lindberg</authors>
+    <projectUrl>https://github.com/Antraciten/SharepointLookup</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Query a Sharepoint list using a key from promoted property</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>BizTalk, BizTalkComponents, PipelineComponents</tags>
+    <dependencies>
+      <dependency id="BizTalkComponents.Utilities.LookupUtility" version="1.2.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\BizTalkComponents.PipelineComponents.SharepointLookup.dll" target="lib\net46"/>
+  </files>
+</package>

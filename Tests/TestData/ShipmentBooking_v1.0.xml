@@ -1,0 +1,39 @@
+﻿<ns0:ShipmentBooking xmlns:ns0="http://INT1066.ShipmentBooking.Schemas.API.ShipmentBooking">
+  <ISTTransportRateId>f99f99f890</ISTTransportRateId>
+  <capacityBatchId>100008_1016</capacityBatchId>
+  <iSTTransportRateValidTo>
+    <value>2020-03-12T14:30:00Z</value>
+  </iSTTransportRateValidTo>
+  <orderId>1234321</orderId>
+  <deliveryPeriodStartDate>2020-04-02T15:00:00Z</deliveryPeriodStartDate>
+  <deliveryPeriodEndDate>2020-04-02T15:00:00Z</deliveryPeriodEndDate>
+  <transportLine>
+    <itemId>2000120</itemId>
+    <name>Standard stor kran m Jibb Fossilfri</name>
+    <salesOrderId>1234321</salesOrderId>
+    <salesPrice>1200</salesPrice>
+    <salesQty>1</salesQty>
+    <salesUnit>STK</salesUnit>
+  </transportLine>
+  <transportLine>
+    <itemId>2000101</itemId>
+    <name>Dag - Levering</name>
+    <salesOrderId>1234321</salesOrderId>
+    <salesPrice>1250</salesPrice>
+    <salesQty>1</salesQty>
+    <salesUnit>STK</salesUnit>
+  </transportLine>
+  <vehicleAttributeCode />
+  <unloadingInstructionCode>
+    <unloadingInstructionCode>Z61</unloadingInstructionCode>
+  </unloadingInstructionCode>
+  <unloadingInstructionCode>
+    <unloadingInstructionCode>Z55</unloadingInstructionCode>
+  </unloadingInstructionCode>
+  <unloadingInstructionCode>
+    <unloadingInstructionCode>Z96</unloadingInstructionCode>
+  </unloadingInstructionCode>
+  <unloadingInstructionCode>
+    <unloadingInstructionCode>Z91</unloadingInstructionCode>
+  </unloadingInstructionCode>
+</ns0:ShipmentBooking>
