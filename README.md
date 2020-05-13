@@ -11,3 +11,17 @@ To read more on how the query is done see this component: https://github.com/Biz
 | Property Path    | string | The property Path to use as key to query the sharepoint list, i.e. http//:examplenamespace#Myproperty      |
 | Destination Path | string | The property Path to where the returned value will be promoted to, i.e. http//:examplenamespace#Myproperty |
 | List Name        | string | The name of the Sharepoint list to query                                                                   |
+
+
+## Configuration
+Both the pipeline component and the LookupUtility component must be installed to the GAC.
+Connection information to the storage should typically be placed in BizTalks configuration file. The Sharepoint repository looks for the config key SharePointSite
+
+```xml
+<appSettings>
+    <add key="SharePointSite" value="http://server/listdirectory"/>
+</appSettings>
+```
+
+## SharePoint
+Read the documentation for lookupUtility on how to set up the SharePoint list.
