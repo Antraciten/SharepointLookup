@@ -4,6 +4,7 @@
     <id>BizTalkComponents.PipelineComponents.SharepointLookup</id>
     <version>1.0</version>
     <authors>Timothy Lindberg</authors>
+    <projectUrl>https://github.com/Antraciten/SharepointLookup</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Query a Sharepoint list using a key from promoted property</description>
     <releaseNotes>Initial release.</releaseNotes>
