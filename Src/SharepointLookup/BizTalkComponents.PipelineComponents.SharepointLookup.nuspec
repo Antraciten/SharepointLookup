@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>BizTalkComponents.PipelineComponents.SharepointLookup</id>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <authors>Timothy Lindberg</authors>
     <projectUrl>https://github.com/Antraciten/SharepointLookup</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
